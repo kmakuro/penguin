@@ -367,16 +367,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Universal_Color_0000: 21300002
-      Water_0004: 21300006
-      Snowflake_0004: 21300014
       Snowflake_0001: 21300018
-      Water_0001: 21300000
-      Snowflake_0005: 21300012
-      Snowflake_0003: 21300010
       Snowflake_0002: 21300016
-      Water_0003: 21300008
+      Snowflake_0003: 21300010
+      Snowflake_0004: 21300014
+      Snowflake_0005: 21300012
+      Universal_Color_0000: 21300002
+      Water_0001: 21300000
       Water_0002: 21300004
+      Water_0003: 21300008
+      Water_0004: 21300006
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

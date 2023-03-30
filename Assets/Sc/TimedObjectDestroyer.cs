@@ -8,13 +8,14 @@ public class TimedObjectDestroyer : MonoBehaviour
     private float timeAlive = 0.0f;
     public bool destroyChildrenOnDeath = true;
     public static bool quitting = false;
-
-    private void OnApplicationQuit()
+    // Start is called before the first frame update
+    void Start()
     {
         quitting = true;
         DestroyImmediate(this.gameObject);
     }
 
+    // Update is called once per frame
     void Update()
     {
         if (timeAlive > lifetime)
@@ -27,13 +28,12 @@ public class TimedObjectDestroyer : MonoBehaviour
         }
     }
 
-
     private void OnDestroy()
     {
         if (destroyChildrenOnDeath && !quitting && Application.isPlaying)
         {
-            int childCount = transform.childCount;
-            for (int i = childCount - 1; i >= 0; i--)
+            int childcount = transform.childCount;
+            for (int i = childcount - 1; i >= 0; i--)
             {
                 GameObject childObject = transform.GetChild(i).gameObject;
                 if (childObject != null)
@@ -42,6 +42,5 @@ public class TimedObjectDestroyer : MonoBehaviour
                 }
             }
         }
-        transform.DetachChildren();
     }
 }

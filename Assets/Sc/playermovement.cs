@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class playermovement : MonoBehaviour
@@ -18,31 +17,46 @@ public class playermovement : MonoBehaviour
     private enum MovementState { idle, running, jumping, falling }
 
     [SerializeField] private AudioSource jumpSoundEffect;
+    //shoot/
 
-    // Start is called before the first frame update
+    public ProjectileBehaviour ProjectilePrefab;
+    public Transform LaunchOffset;
+    
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
-    private void Update()
+    public void Update()
     {
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+        if (!Mathf.Approximately(0, dirX))
+        {
+            transform.rotation = dirX < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
+        }
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            //jumpSoundEffect.Play();//
+            jumpSoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
+       
+        //shoot//
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+        }
 
-      //  UpdateAnimationState();//
+      UpdateAnimationState();
     }
-     /*
+    
     private void UpdateAnimationState()
     {
         MovementState state;
@@ -72,10 +86,12 @@ public class playermovement : MonoBehaviour
         }
 
         anim.SetInteger("state", (int)state);
-    }*/
+    }
+    
 
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
+    
 }
