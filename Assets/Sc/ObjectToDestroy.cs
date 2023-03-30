@@ -33,6 +33,11 @@ public class ObjectToDestroy : MonoBehaviour
             die = true;
             Healthtext.text = " X  " + health;
         }
+        if (collision.gameObject.CompareTag("underground"))
+        {
+            die = true;
+            Healthtext.text = " X  " + health;
+        }
     }
 
     void Update()
