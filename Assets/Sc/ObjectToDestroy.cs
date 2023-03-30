@@ -35,6 +35,7 @@ public class ObjectToDestroy : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("underground"))
         {
+            Debug.Log("Collision");
             die = true;
             Healthtext.text = " X  " + health;
         }
