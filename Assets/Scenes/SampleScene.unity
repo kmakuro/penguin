@@ -2672,6 +2672,8 @@ MonoBehaviour:
   moveSpeed: 7
   jumpForce: 8
   jumpSoundEffect: {fileID: 0}
+  ProjectilePrefab: {fileID: 0}
+  LaunchOffset: {fileID: 0}
 --- !u!61 &1548280978
 BoxCollider2D:
   m_ObjectHideFlags: 0

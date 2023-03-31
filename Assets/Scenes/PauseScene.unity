@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2106,6 +2106,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Menu.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3411dfc27dbb0d64186458cfa7d938b8, type: 3}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Level1.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3411dfc27dbb0d64186458cfa7d938b8, type: 3}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Level2.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3411dfc27dbb0d64186458cfa7d938b8, type: 3}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Level3.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3411dfc27dbb0d64186458cfa7d938b8, type: 3}
     - target: {fileID: 6299363354903976073, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
       propertyPath: m_Name
       value: AudioManager

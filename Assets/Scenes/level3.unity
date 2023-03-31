@@ -583,9 +583,9 @@ GameObject:
   - component: {fileID: 263123559}
   - component: {fileID: 263123558}
   - component: {fileID: 263123560}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: ice
-  m_TagString: Untagged
+  m_TagString: building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17623,6 +17623,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Menu.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3411dfc27dbb0d64186458cfa7d938b8, type: 3}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Level1.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3411dfc27dbb0d64186458cfa7d938b8, type: 3}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Level2.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3411dfc27dbb0d64186458cfa7d938b8, type: 3}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Level3.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3411dfc27dbb0d64186458cfa7d938b8, type: 3}
     - target: {fileID: 6299363354903976073, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -18216,7 +18232,7 @@ GameObject:
   - component: {fileID: 1717254029}
   - component: {fileID: 1717254032}
   - component: {fileID: 1717254031}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Snow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20136,7 +20152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1912873340}
   - component: {fileID: 1912873339}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21050,7 +21066,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1545011313544811079, guid: d86d326012cb53b4f8f015f71b8e80f6, type: 3}
       propertyPath: shootCooldown
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4048599112128384232, guid: d86d326012cb53b4f8f015f71b8e80f6, type: 3}
       propertyPath: m_Name
