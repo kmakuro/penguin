@@ -36,9 +36,8 @@ namespace GameDev3.Project
             SceneManager.LoadScene("Level4", LoadSceneMode.Single);
         }
 
-        public void LoadMainMenu(Animator transition)
+        public void LoadMainMenu()
         {
-            transition.SetBool("End", true);
             Invoke("LoadSceneMenu", 3f);
         }
 
@@ -47,10 +46,11 @@ namespace GameDev3.Project
             SceneManager.LoadScene("LevelDifficultSelect", LoadSceneMode.Single);
         }
 
-        public void BackToMenu(Animator transition)
+        public void BackToMenu()
         {
-            transition.SetBool("End", true);
-            Invoke("LoadSceneMenu", 2f);
+            Time.timeScale = 1f;
+            PauseMenu.GameIsPaused = false;
+            SceneManager.LoadScene("mainmenu", LoadSceneMode.Single);
         }
 
         private void LoadSceneStartDelay()
@@ -61,7 +61,7 @@ namespace GameDev3.Project
         private void LoadSceneMenu()
         {
             PauseMenu.GameIsPaused = false;
-            SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("mainmenu", LoadSceneMode.Single);
         }
 
         public void UnloadScene(string sceneName)
