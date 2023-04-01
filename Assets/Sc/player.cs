@@ -17,14 +17,12 @@ public class player : MonoBehaviour
     public Animator anim;
     private float dtrX;
     
-
-
-
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -32,7 +30,9 @@ public class player : MonoBehaviour
     {
         var movement = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
+        
 
+        
 
         if (!Mathf.Approximately(0, movement))
         {
@@ -40,13 +40,10 @@ public class player : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
         {
-            _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-            FindObjectOfType<AudioManager>().Play("Jump");
+            Jump();
         }
 
-
         //animation 
-
 
         if(_rigidbody.velocity.y == 0 && movement !=0)
         {
@@ -56,13 +53,7 @@ public class player : MonoBehaviour
         {
             anim.SetBool("IsWalk", false);
         }
-
-
-
-
-
-
-
+        
         //jump
         if (_rigidbody.velocity.y == 0)
         {
@@ -105,11 +96,13 @@ public class player : MonoBehaviour
             isfire = false;
         }
         
-        //   if (canShoot == false)
-        // {
-        //   anim.SetBool("Isfire", false);
-        // }
+        
 
+    }
+    private void Jump()
+    {
+        _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+        FindObjectOfType<AudioManager>().Play("Jump");
     }
     private void ResetShoot()
     {
