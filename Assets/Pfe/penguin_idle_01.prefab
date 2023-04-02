@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4048599112872870643}
   - component: {fileID: 4048599112872870627}
   - component: {fileID: 4048599112872870632}
+  - component: {fileID: 5775610081451937738}
   m_Layer: 0
   m_Name: penguin_idle_01
   m_TagString: Player
@@ -158,7 +159,7 @@ MonoBehaviour:
   anim: {fileID: 0}
 --- !u!95 &4048599112872870643
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -175,7 +176,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4048599112872870627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +192,7 @@ MonoBehaviour:
   respawnPoint: {x: 0, y: 0, z: 0}
   die: 0
   health: 3
+  Healthtext: {fileID: 0}
 --- !u!114 &4048599112872870632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,8 +205,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff20df0e34eedd4c96eeb46ec38ee58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Passdoor: {fileID: 0}
   colliderToTurnOff: {fileID: 0}
   cointext: {fileID: 0}
+--- !u!114 &5775610081451937738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4048599112128384232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689c59173a5d0ec4abf123abb9c47263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  JumpForce: 9
+  shootCooldown: 1
+  ProjectilePrefab: {fileID: 8139555558837757220, guid: 05f1938724a365d4c988b6067c3fd87f, type: 3}
+  LaunchOffset: {fileID: 0}
+  anim: {fileID: 4048599112872870643}
 --- !u!1 &4048599112187596518
 GameObject:
   m_ObjectHideFlags: 0

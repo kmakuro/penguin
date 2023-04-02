@@ -3,7 +3,8 @@ using UnityEngine;
 using GameDev3.Project;
 
 public class player : MonoBehaviour
-{ public float MovementSpeed = 1.0f;
+{ 
+    public float MovementSpeed = 1.0f;
     public  float JumpForce = 1.0f;
     
     private Rigidbody2D _rigidbody;
@@ -40,7 +41,8 @@ public class player : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
         {
-            Jump();
+            _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+            FindObjectOfType<AudioManager>().Play("Jump");
         }
 
         //animation 
@@ -95,14 +97,6 @@ public class player : MonoBehaviour
         {
             isfire = false;
         }
-        
-        
-
-    }
-    private void Jump()
-    {
-        _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-        FindObjectOfType<AudioManager>().Play("Jump");
     }
     private void ResetShoot()
     {

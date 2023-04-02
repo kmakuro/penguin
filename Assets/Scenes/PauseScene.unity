@@ -1728,15 +1728,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.1764706, b: 0.3764706, a: 1}
+  m_Color: {r: 0.6379139, g: 0.77668655, b: 0.9339623, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 87d5131f7718b17408ad0703df0fa7c1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1975,6 +1975,30 @@ PrefabInstance:
       propertyPath: Level3.clip
       value: 
       objectReference: {fileID: 8300000, guid: 3411dfc27dbb0d64186458cfa7d938b8, type: 3}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Menu.volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Level1.volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Level2.volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: Level3.volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599200534609738870, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.53
+      objectReference: {fileID: 0}
     - target: {fileID: 6299363354903976073, guid: d09a21f70b5a58243afbd3966b0c2aa8, type: 3}
       propertyPath: m_Name
       value: AudioManager
