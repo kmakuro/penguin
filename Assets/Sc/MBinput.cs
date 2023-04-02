@@ -33,7 +33,7 @@ public class MBinput : MonoBehaviour
     public void PointerDownLeft()
     {
         moveleft = true;
-        anim.SetBool("IsWalk", true);
+        
     }
     public void PointerUpLeft()
     {
@@ -42,7 +42,7 @@ public class MBinput : MonoBehaviour
     public void PointerDownRight()
     {
         moveright = true;
-        anim.SetBool("IsWalk", true);
+        
     }
     public void PointerUpRight()
     {
